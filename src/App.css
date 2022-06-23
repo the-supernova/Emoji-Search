@@ -164,4 +164,10 @@ div.input-wrapper #random-text-btn:active {
   flex-direction: row;
   padding: 10px;
   overflow: scroll;
+  -ms-overflow-style: none; /* Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.result-item .tags::-webkit-scrollbar {
+  display: none;
 }
