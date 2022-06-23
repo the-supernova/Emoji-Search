@@ -1,5 +1,5 @@
 import React from "react";
-import ResultItem from "../ResultItem";
+import ResultItem from "./ResultItem";
 
 const ResultsRenderer = ({ results = [] }) => {
     const getResultItems = () => {
