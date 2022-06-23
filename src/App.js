@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ResultsRenderer from "./components/ResultsRenderer";
 import './App.css';
 import appbasejs from "appbase-js";
 
@@ -55,6 +56,9 @@ function App() {
         <button id="recommend-btn" onClick={makeApiCall}>
           Recommend
         </button>
+      </div>
+      <div className="result-wrapper">
+        <ResultsRenderer results={results} />
       </div>
     </div>
   );
