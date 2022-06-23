@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ResultsRenderer from "./components/ResultsRenderer";
+import SentimentStats from "./components/SentimentStats";
 import './App.css';
 import appbasejs from "appbase-js";
 
@@ -16,6 +17,9 @@ function App() {
   const [isSearching, setIsSearching] = useState(false);
   // keeping record of the fetched results
   const [results, setResults] = useState(null);
+  const [sentimentData, setSentimentData] = useState([]);
+  // holds time taken by script
+  const [scriptTime, setScriptTime] = useState(0);
 
   // makes a call to the backend to fetch results
   const makeApiCall = () => {
@@ -37,6 +41,8 @@ function App() {
       .then((res) => {
         setIsSearching(false);
         setResults(res[SEARCH_ID].hits.hits);
+        setSentimentData(res.analysis);
+        setScriptTime(res?.settings?.script_took ?? 0);
       })
       .catch((err) => {
         console.log("search error: ", err);
@@ -57,6 +63,7 @@ function App() {
           Recommend
         </button>
       </div>
+      <SentimentStats sentimentData={sentimentData} scriptTime={scriptTime} />
       <div className="result-wrapper">
         <ResultsRenderer results={results} />
       </div>
