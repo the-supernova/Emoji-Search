@@ -248,3 +248,61 @@ div.input-wrapper #random-text-btn:active {
   background: orange;
   color: white;
 }
+
+.sentiment-sentence__token-data {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.sentiment-sentence__token-data div.token {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  margin-right: 7px;
+  padding: 1rem;
+  position: relative;
+}
+
+.sentiment-sentence__token-data div.token.entity-item {
+  background: #f2f2f2;
+}
+
+.sentiment-sentence__token-data div.token span#raw {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.sentiment-sentence__token-data div.token.entity-item span#raw {
+  font-weight: 700;
+}
+
+.sentiment-sentence__token-data div.token span#raw .entity {
+  position: absolute;
+  top: 2px;
+  right: 7px;
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+.sentiment-sentence__token-data div.token span#raw.emphasis {
+  font-style: italic;
+}
+
+.sentiment-sentence__token-data div.token span#raw.positive {
+  color: green;
+}
+
+.sentiment-sentence__token-data div.token span#raw.negative {
+  color: red;
+}
+
+.sentiment-sentence__token-data div.token span#pos {
+  font-size: 12px;
+}
+
+.sentiment-sentence__time-taken {
+  font-size: 14px;
+}
