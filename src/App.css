@@ -171,3 +171,18 @@ div.input-wrapper #random-text-btn:active {
 .result-item .tags::-webkit-scrollbar {
   display: none;
 }
+
+.result-item .tags span {
+  padding: 7px;
+  margin: 3px 5px;
+  word-break: pre-wrap;
+  border-radius: 7px;
+  background: #c5e0f7;
+  box-shadow: inset 4px 4px 7px #9cb1c3 inset -4px -4px 7px #eeffff;
+  color: #5f65f3;
+}
+
+#emoji-wrapper {
+  font-size: 3rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
