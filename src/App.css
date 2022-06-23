@@ -306,3 +306,20 @@ div.input-wrapper #random-text-btn:active {
 .sentiment-sentence__time-taken {
   font-size: 14px;
 }
+
+@media only screen and (max-width: 600px) {
+  div.input-wrapper {
+    width: 90vw;
+  }
+  div.input-wrapper input {
+    min-width: unset;
+    width: 100%;
+  }
+  .results-renderer {
+    justify-content: space-around;
+  }
+  .result-item {
+    width: 125px;
+    margin: 0.4rem;
+  }
+}
