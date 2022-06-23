@@ -40,12 +40,6 @@ header {
   margin: 0;
 }
 
-.link-wrapper a {
-  text-decoration: none;
-  font-size: 20px;
-  color: #6f73d2;
-}
-
 div.input-wrapper {
   position: relative;
   width: max-content;

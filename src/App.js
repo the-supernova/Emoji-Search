@@ -75,8 +75,13 @@ function App() {
 
   return (
     <div className="app-root">
+      <header>
+        <div className="logo-wrapper">
+          <h1> Emoji Search 💫 </h1>
+        </div>
+      </header>
       {/* loader overlay */}
-      {isSearching && <div className="loader-overlay">Loading...</div>}
+      {isSearching && <div className="loader-overlay"><span>⏳</span></div>}
       <div className="input-wrapper">
         <input
           name="search-field"
