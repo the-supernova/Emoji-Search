@@ -25,3 +25,59 @@ div#root {
   height: 100%;
   width: 100%;
 }
+
+/* App.js */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.logo-wrapper h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.link-wrapper a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #6f73d2;
+}
+
+div.input-wrapper {
+  position: relative;
+  width: max-content;
+  margin: 72px auto 0;
+  display: flex;
+  align-items: stretch;
+  max-width: 100%;
+}
+
+div.input-wrapper input {
+  height: 2.5rem;
+  font-size: 1.5rem;
+  min-width: 250px;
+  max-width: 600px;
+  width: 100vw;
+  padding-left: 0.6rem;
+}
+
+div.input-wrapper #recommend-btn {
+  border: none;
+  background: #6f73d2;
+  color: #d9f0ff;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+div.input-wrapper #recommend-btn:hover {
+  filter: brightness(110%);
+}
+
+div.input-wrapper #recommend-btn:active {
+  filter: brightness(120%);
+}
