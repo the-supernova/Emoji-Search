@@ -81,3 +81,26 @@ div.input-wrapper #recommend-btn:hover {
 div.input-wrapper #recommend-btn:active {
   filter: brightness(120%);
 }
+
+div.input-wrapper #random-text-btn {
+  position: absolute;
+  top: -96%;
+  left: 0;
+  border: none;
+  padding: 5px 10px;
+  background: #d9f0fe;
+  color: #6f73d2;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 3px;
+}
+
+div.input-wrapper #random-text-btn:hover {
+  filter: brightness(110%);
+}
+
+div.input-wrapper #random-text-btn:active {
+  filter: brightness(120%);
+}
