@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ResultsRenderer from "./components/ResultsRenderer";
 import SentimentStats from "./components/SentimentStats";
 import './App.css';
@@ -20,6 +20,30 @@ function App() {
   const [sentimentData, setSentimentData] = useState([]);
   // holds time taken by script
   const [scriptTime, setScriptTime] = useState(0);
+  const currentSelectedRandomText = useRef("");
+
+  // random text generator function
+  const generateRandomText = () => {
+    const randomTextArray = [
+      "Home is the best place to rest",
+      "money is awesome but not everything",
+      "Slow and steady wins the race",
+      "I'm feeling the winter blues",
+      "omg so bored & my tattoooos are so itchy!! help! aha =)",
+      "just got back from church, and I totally hate insects.",
+      "Sports bikes are fun and interesting",
+      "Taking Katie to see Night at the Museum",
+      "I love watching the sunset from the mountains",
+      "Men do cry, but with attitude"
+    ];
+    let textIndex = Math.floor(Math.random() * 10);
+    while(currentSelectedRandomText.current === randomTextArray[textIndex]) {
+      textIndex = Math.floor(Math.random() * 10);
+    }
+
+    setSearchText(randomTextArray[textIndex]);
+    currentSelectedRandomText.current = randomTextArray[textIndex];
+  };
 
   // makes a call to the backend to fetch results
   const makeApiCall = () => {
@@ -51,6 +75,8 @@ function App() {
 
   return (
     <div className="app-root">
+      {/* loader overlay */}
+      {isSearching && <div className="loader-overlay">Loading...</div>}
       <div className="input-wrapper">
         <input
           name="search-field"
@@ -61,6 +87,10 @@ function App() {
         />
         <button id="recommend-btn" onClick={makeApiCall}>
           Recommend
+        </button>
+        {/* button to generate random text */}
+        <button id="random-text-btn" onClick={generateRandomText}>
+          Generate Random Text
         </button>
       </div>
       <SentimentStats sentimentData={sentimentData} scriptTime={scriptTime} />
