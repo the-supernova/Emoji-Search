@@ -186,3 +186,65 @@ div.input-wrapper #random-text-btn:active {
   font-size: 3rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
+
+/* SentimentStats */
+.sentiment-stats {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto 2rem;
+  padding: 1rem;
+  background: #d9f0ff42;
+  border-radius: 5px;
+}
+
+.sentiment-sentence {
+  margin-bottom: 1rem;
+}
+
+.sentiment-sentence__stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.sentiment-sentence__stats--meta {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sentiment-sentence__stats--meta span {
+  display: inline-block;
+  margin: 5px;
+}
+
+.sentiment-sentence__stats--types {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sentiment-sentence__stats--types span {
+  display: inline-block;
+  margin: 5px 5px 5px 0;
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-left: 5px;
+  background-color: #d9edf7;
+}
+
+.sentiment-sentence__stats--types span.positive {
+  background: green;
+  color: white;
+}
+
+.sentiment-sentence__stats--types span.negative {
+  background: red;
+  color: white;
+}
+
+.sentiment-sentence__stats--types span.mixed {
+  background: orange;
+  color: white;
+}
