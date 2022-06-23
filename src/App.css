@@ -104,3 +104,34 @@ div.input-wrapper #random-text-btn:hover {
 div.input-wrapper #random-text-btn:active {
   filter: brightness(120%);
 }
+
+/* ResultsRenderer.js */
+
+.results-renderer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+#no-results {
+  font-size: 2rem;
+}
+
+/* ResultItem.js */
+
+.result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 250px;
+  height: 350px;
+  background: #d9f0ff;
+  box-shadow: -1px 0 8px #000;
+  transition: all 450ms ease;
+  cursor: pointer;
+  margin: 1rem;
+  padding: 10px 5px;
+  position: relative;
+}
