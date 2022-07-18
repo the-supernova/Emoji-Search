@@ -1,3 +1,5 @@
+The dataset, created for the application can be accessed through [Dejavu](https://dejavu.appbase.io/?appname=emoji-dataset&url=https://f1da7b624918:3331c67d-3477-4b24-aa89-aefc6ca4683e@appbase-demo-ansible-abxiydt-arc.searchbase.io&mode=edit)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
